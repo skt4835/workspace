@@ -1,0 +1,111 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 770px;
+  height: 300px;
+  border-radius: 6px;
+  /* 
+  첫번째 : x축으로의 그림자 이동
+  두번째 : y축으로의 그림자 이동
+  세번째 : 그림자의 퍼짐 정도
+  네번째 : 그림자의 색
+  */
+  box-shadow: 0px 0px 10px lightgray;
+}
+
+.head{
+  margin: 10px 10px;
+}
+
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main1{
+  width: 55%;
+  height: 200px;
+  box-shadow: 0px 0px 8px lightgray;
+  border-radius: 6px;
+  margin: 10px 0px 0px 18px;
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+}
+
+.text{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.input{
+  width: 400px;
+  height: 30px;
+  margin: 5px 0px 10px 0px;
+}
+
+.button{
+  background-color: rgb(94, 97, 252);
+  border: 0px;
+  border-radius: 6px;
+  padding: 6px 45px;
+  color: white;
+  margin-top: 5px;
+}
+
+button:hover{
+  color: (234, 234, 234);
+  background-color: (94, 97, 230);
+  cursor: pointer;
+}
+
+.side{
+  width: 40%;
+  margin: 10px 10px 0px 15px;
+  padding: 1%;
+}
+
+.side1{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h4{
+  margin-bottom: 6px;
+}
+
+li{
+  font-size: 0.8rem;  
+  margin-bottom: 4px;
+}
+
+a{
+  background-color: bisque;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 4px;
+}
+
+p{
+  text-align: center;
+  color: lightcoral;
+  font-size: 0.7rem;
+  margin: 6px 0px;
+}
+
+input[type="checkbox"]{
+  position: relative;
+  top: 1px;
+}

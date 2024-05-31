@@ -1,0 +1,23 @@
+/* 
+
+*/
+
+.p1{
+  color: red;
+  background-color: black;
+}
+
+/* tag 선택자 */
+div{
+  color: aqua !important;
+  background-color: blueviolet;
+}
+
+/* class 선택자 */
+.d1{
+  color: blue;
+}
+
+#d1{
+color: red;
+}

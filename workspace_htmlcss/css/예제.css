@@ -1,0 +1,102 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: lightskyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr{
+  margin: 10px;
+}
+
+.container{
+  background-color: white;
+  border-radius: 20px;
+  width: 360px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  transition: 0.5s;
+}
+
+img:hover{
+  scale: 1.1;
+}
+
+.main{
+  width: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fa-heart{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+}
+
+label{
+  cursor: pointer;
+}
+
+.sub{
+  width: 100%;
+  height: 100%;
+}
+
+.text{
+  margin: 10px;
+}
+
+.info{
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot{
+  margin: 10px;
+  flex-direction: row;
+}
+
+.f_1{
+  width: 80px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.fma{
+  display: flex;
+  align-items: center;
+}
+
+.button{
+  color: white;
+  background-color: rgb(49, 211, 16);
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.fsi{
+  display: flex;
+  flex-direction: column;
+}
+
+.ff{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}

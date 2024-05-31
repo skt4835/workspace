@@ -1,0 +1,92 @@
+/* 
+position을 absolute주면 해당 태그는 display속성이 inline-block으로 변경됨.
+*/
+
+body{
+  background-color: lightslategray;
+  width: 100vw;
+}
+
+.container{
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 16px;
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.header > span{
+  color: white;
+  background-color: coral;
+  font-weight: bold;
+  border-radius: 14px;
+  padding: 5px 20px;
+}
+
+.header > h1{
+  font-size: 2.5rem;
+  margin: 20px 0px 10px 0px;
+}
+
+.header > p{
+  line-height: 26px;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.member{
+  position: relative;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.intro{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+
+  /* 
+  opacity와 visibility같이 사용해야함 
+  */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.member:hover .intro{
+  opacity: 1;
+  visibility: visible;
+}
+
+.sns{
+  /* i(아이콘)은 width가 아닌 font-size로 크기 조절 */
+  font-size: 1.3rem;
+}
+
+.sns > span:hover{
+  color: lightskyblue;
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+ul > li{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 0 7px;
+}
+
+.title{
+  font-size: 20px;
+  color: white;
+}
+
+.background{
+  background-image: url(화면구현_메인배경.PNG);
+  height: 873px;
+}
+
+.div{
+  position: relative;
+  display: inline-block;
+  width:550px;
+  left: 350px;
+}
+
+.white{
+  color: white;
+  ;
+}
+
+.left{
+  margin-left: 20%;
+}
+
+.text{
+margin: 0px; 
+}
+

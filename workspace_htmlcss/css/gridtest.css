@@ -1,0 +1,49 @@
+body{
+  background-color: black;
+  width: 100vw;
+}
+
+.container{
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+}
+
+button{
+  margin-top: 10px;
+  background-color: coral;
+  border: 0px;
+  border-radius: 14px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.top{
+  text-align: center;
+  margin: 20px;
+}
+
+p{
+  line-height: 25px;
+}
+
+.sub{
+  margin: auto;
+  padding: 10px;
+}
+
+.pic{
+  margin: 10px auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.pic div{
+  overflow: hidden;
+}

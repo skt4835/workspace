@@ -1,0 +1,29 @@
+.container{
+  border: 1px solid black;
+  width: 800;
+  margin: auto;
+}
+
+table, tr, td{
+  border: 1px solid black;
+}
+
+table{
+  border-collapse: collapse;
+  /* 부모 요소 기준 */
+  width: 100%;
+}
+
+.red{
+  color: red;
+}
+
+.text{
+  text-align: end;
+}
+
+.text2{
+  /* float: left; */
+   display: inline-block;
+   margin-right: 700px;
+}

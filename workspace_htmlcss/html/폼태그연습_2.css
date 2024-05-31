@@ -1,0 +1,41 @@
+table, tr, td{
+  border: 1px solid black;
+}
+
+table{
+  border-collapse: collapse;
+  width: 900px;
+  margin: auto;
+}
+
+td{
+  padding: 6px;
+}
+
+.title-tr{
+}
+
+.title-tr span{
+  background-color: skyblue;
+  text-align: center;
+}
+
+.title-tr > td > span > span{
+  font-size: 0.9rem;
+  font-style: italic;
+  color: red;
+}
+
+
+table > tbody > tr > td:first-child{
+  text-align: center;
+}
+
+.red-font{
+  color: red;
+}
+
+.btn-div{
+  text-align: center;
+  margin-top: 10px;
+}

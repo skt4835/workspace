@@ -1,0 +1,60 @@
+body{
+  background-color: rgb(0, 7, 21);
+}
+
+.container{
+  width: 700px;
+  margin: 50px auto;
+}
+
+.tab-btn{
+  display: flex;
+  gap: 2px
+}
+
+.tab-btn a{
+  background-color: white;
+  color: rgb(2, 7, 21);
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  border-top: 2px solid white;
+}
+
+.tab-content{
+  position: relative;
+}
+
+.tab-item{
+  position: absolute;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  background-color: coral;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.tab-item:target{
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+}
+
+.tab-btn > a{
+  transition: all 0.5s;
+}
+
+.tab-btn > a:hover{
+  color: coral;
+  background-color: rgba(2, 7, 21, 0.3);
+}
+
+/* a 태그 중 class가 show인것들 선택 */
+a.show{
+  background-color: black;
+  color: white;
+  border-top: 2px solid white
+}
