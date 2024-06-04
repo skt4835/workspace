@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 public class 기본자료형의_형변환 {
     public static void main(String[] args){
 //        정수는 실수에 저장 가능
-//        자동 혛변환(promotion)
+//        자동 형변환(promotion)
         int num1 = 5;
         double num2 = num1;
         System.out.println("num2 = " + num2);
