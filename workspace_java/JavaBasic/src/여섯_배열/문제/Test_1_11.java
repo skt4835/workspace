@@ -11,5 +11,12 @@ public class Test_1_11 {
             }
         }
         System.out.println(sum);
+
+        for (int e : arr){
+            if (e % 2 == 0){
+                sum++;
+            }
+        }
+            System.out.println(sum);
     }
 }
