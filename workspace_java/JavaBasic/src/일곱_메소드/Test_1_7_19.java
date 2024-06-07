@@ -1,16 +1,14 @@
 package 변수와자료형.일곱_메소드;
 
-import javax.naming.Name;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Test_1_7_9 {
+public class Test_1_7_19 {
     public static void main(String[] args){
-        test7(10, 3);
-        test8("java", "python");
-        test9_1("임꺽정");
-        test9_2(10);
-        test9_3("파리");
+//        test7(10, 3);
+//        test8("java", "python");
+//        test9_1("임꺽정");
+//        test9_2(10);
+//        test9_3("파리");
 //        test10("임꺽정", 10, "파리");
         Scanner sc = new Scanner(System.in);
 //        String name = sc.next();

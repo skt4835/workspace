@@ -1,6 +1,6 @@
 package 변수와자료형.일곱_메소드;
 
-//매개변수(parameter) : method 정의 부분 소괄호 안에서 정의된 변수
+
 
 
 public class 메서드_3 {
