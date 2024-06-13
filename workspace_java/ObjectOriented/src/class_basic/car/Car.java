@@ -12,6 +12,8 @@ public class Car {
     //제조사 값을 변경하는 메서드
     public void setBrand(String b){
         brand = b;
+
+        int x = 100;
     }
 
     //차이름을 변경하는 메서드
