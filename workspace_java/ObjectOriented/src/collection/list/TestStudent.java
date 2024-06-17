@@ -23,10 +23,24 @@ public class TestStudent {
 
         for (int i = 0; i < studentsList.size(); i++){
             if (studentsList.get(i).getTotal() >= 150){
-
+                System.out.println(studentsList.get(i));
             }
-
         }
+        int sum = 0;
+        for (int i = 0; i < studentsList.size(); i++){
+            sum = studentsList.get(i).getTotal();
+            double avg = (double) sum / 2;
+            System.out.println(avg);
+        }
+        int max = 0;
+        Student best = null;
+        for (int i = 0; i < studentsList.size(); i++){
+            if (studentsList.get(i).getTotal() > max){
+                max = studentsList.get(i).getTotal();
+                best = studentsList.get(i);
+            }
+        }
+        System.out.println(best);
 
 
 
