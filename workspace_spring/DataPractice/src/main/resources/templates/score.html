@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>학생 성적 입력 프로그램</h1>
+  [[${name}]] 학생의 성적을 입력합니다
+<form action="/stuInfo" method="post">
+  <input type="hidden" name="name" th:value="${name}">
+    국어 <input type="text" name=""> <br>
+    영어 <input type="text" name=""> <br>
+    수학 <input type="text" name=""> <br>
+    <input type="submit" value="확인">
+</form>
+  
+</body>
+</html>
