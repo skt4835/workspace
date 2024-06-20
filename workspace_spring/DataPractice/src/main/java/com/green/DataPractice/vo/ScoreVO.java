@@ -1,14 +1,15 @@
 package com.green.DataPractice.vo;
 
+import java.util.Arrays;
+
 public class ScoreVO {
     private String name;
-    private String grade;
-    private String tel;
+    private int year;
+    private String[] tel;
     private String gender;
-    private String kor;
-    private String math;
-    private String eng;
-    private String avg;
+    private int korScore;
+    private int mathScore;
+    private int engScore;
 
     public String getName() {
         return name;
@@ -18,19 +19,19 @@ public class ScoreVO {
         this.name = name;
     }
 
-    public String getGrade() {
-        return grade;
+    public int getYear() {
+        return year;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public String getTel() {
+    public String[] getTel() {
         return tel;
     }
 
-    public void setTel(String tel) {
+    public void setTel(String[] tel) {
         this.tel = tel;
     }
 
@@ -42,35 +43,40 @@ public class ScoreVO {
         this.gender = gender;
     }
 
-    public String getKor() {
-        return kor;
+    public int getKorScore() {
+        return korScore;
     }
 
-    public void setKor(String kor) {
-        this.kor = kor;
+    public void setKorScore(int korScore) {
+        this.korScore = korScore;
     }
 
-    public String getMath() {
-        return math;
+    public int getMathScore() {
+        return mathScore;
     }
 
-    public void setMath(String math) {
-        this.math = math;
+    public void setMathScore(int mathScore) {
+        this.mathScore = mathScore;
     }
 
-    public String getEng() {
-        return eng;
+    public int getEngScore() {
+        return engScore;
     }
 
-    public void setEng(String eng) {
-        this.eng = eng;
+    public void setEngScore(int engScore) {
+        this.engScore = engScore;
     }
 
-    public String getAvg() {
-        return avg;
-    }
-
-    public void setAvg(String avg) {
-        this.avg = avg;
+    @Override
+    public String toString() {
+        return "ScoreVO{" +
+                "name='" + name + '\'' +
+                ", year=" + year +
+                ", tel=" + Arrays.toString(tel) +
+                ", gender='" + gender + '\'' +
+                ", korScore=" + korScore +
+                ", mathScore=" + mathScore +
+                ", engScore=" + engScore +
+                '}';
     }
 }
