@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <table>
+        <tr>
+          <td>글 번호</td>
+          <td>[[${board.boardNum}]]</td>
+          <td>작성자</td>
+          <td>[[${board.writer}]]</td>
+          <td>작성일</td>
+          <td>[[${board.createDate}]]</td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td>[[${board.title}]]</td>
+        </tr>
+        <tr>
+          <td>내용</td>
+          <td>[[${board.content}]]</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <input type="button" value="뒤로가기" onclick="goList()">
+
+      <!-- 현재 상세보기하고 있는 게시글을 삭제하고 게시글 목록 페이지로 이동 -->
+      <input type="button" value="글 삭제" th:onclick="goDelete([[${board.boardNum}]])">
+    </div>
+  </div>
+  
+  <script src="/board_list.js"></script>
+</body>
+</html>
