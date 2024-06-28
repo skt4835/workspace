@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<form action="/regStu" method="post">
+  <div>
+    <div>
+      <table>
+        <tr>
+          <td>학번</td>
+          <td>
+            <input type="text" name="num">
+          </td>
+        </tr>
+    
+        <tr>
+          <td>이름</td>
+          <td>
+            <input type="text" name="name">
+          </td>
+        </tr>
+    
+        <tr>
+          <td>국어점수</td>
+          <td>
+            <input type="text" name="korScore">
+          </td>
+        </tr>
+    
+        <tr>
+          <td>영어점수</td>
+          <td>
+            <input type="text" name="engScore">
+          </td>
+        </tr>
+    
+        <tr>
+          <td>학생소개</td>
+          <td>
+            <textarea name="info"></textarea>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <input type="submit" value="등록완료">
+    </div>
+  </div>
+</form>
+
+<script src="/stu_list.js"></script>
+</body>
+</html>

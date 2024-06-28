@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="scMapper">
+
+    <resultMap id="stuList" type="com.green.DB_Score.vo.StudentVO">
+        <result column="STU_NUM"    property="stuNum" />
+        <result column="STU_NAME"   property="stuName" />
+        <result column="KOR_SCORE"  property="KorScore" />
+        <result column="ENG_SCORE"  property="EngScore" />
+        <result column="INTRO"      property="Intro" />
+    </resultMap>
+
+    <select id="getStuList" resultMap="stuList">
+        SELECT STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+        FROM SCORE_INFO;
+    </select>
+
+<!--  학생 등록 쿼리  -->
+    <insert id="insert">
+        INSERT INTO SCORE_INFO (
+            STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+            , INTRO
+        )
+        VALUES (
+            #{stuNum}
+            , #{stuName}
+            , #{KorScore}
+            , #{EngScore}
+            , #{Intro}
+        );
+    </insert>
+
+<!--  학생정보 상세보기 페이지로 이동  -->
+    <select id="getDetail" resultMap="stuList">
+        SELECT STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+            , INTRO
+        FROM SCORE_INFO
+        WHERE STU_NUM = #{stuNum};
+    </select>
+
+<!--  선택한 학생 정보 데이터 삭제  -->
+    <delete id="delete">
+        DELETE FROM SCORE_INFO
+        WHERE STU_NUM = #{stuNum};
+    </delete>
+
+    <update id="updateStudent">
+        UPDATE SCORE_INFO
+        SET
+            STU_NAME = #{stuName}
+            , KOR_SCORE = #{KorScore}
+            , ENG_SCORE = #{EngScore}
+            , INTRO = #{Intro}
+        WHERE STU_NUM = #{stuNum};
+    </update>
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

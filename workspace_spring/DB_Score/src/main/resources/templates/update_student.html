@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<form action="/updateStudent" method="post">
+  <input type="hidden" name="stuNum" th:value="${stu.stuNum}">
+    <div>
+      <div>
+        <table>
+          <tr>
+            <td>학번</td>
+            <td>[[${stu.stuNum}]]</td>
+            <td>이름</td>
+            <td><input type="text" name="stuName" th:value="${stu.stuName}"></td>
+          </tr>
+  
+          <tr>
+            <td>국어점수</td>
+            <td><input type="text" name="KorScore" th:value="${stu.KorScore}"></td>
+            <td>영어점수</td>
+            <td><input type="text" name="EngScore" th:value="${stu.EngScore}"></td>
+          </tr>
+  
+          <tr>
+            <td>자기소개</td>
+            <td><textarea name="Intro">[[${stu.Intro}]]</textarea></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <input type="button" value="뒤로가기" onclick="goDetail()">
+        <input type="submit" value="정보수정">
+      </div>
+    </div>
+</form>
+
+  <script>
+    function goDetail(){
+      location.href = '/detail'
+    }
+  </script>
+  
+</body>
+</html>
