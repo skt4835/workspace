@@ -1,0 +1,33 @@
+.App {
+  width: 600px;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
+.container{
+  margin: 10px 20px;
+  padding: 0px 20px;
+  text-align: left;
+}
+
+.fir{
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.192);
+  margin-bottom: 10px;
+}
+
+.sec{
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.192);
+  margin-bottom: 30px;
+}
+
+button{
+  width: 60px;
+  background-color: rgba(100, 148, 237, 0.562);
+  margin: 10px 5px;
+}
+
+p{
+  margin: 5px 10px;
+}

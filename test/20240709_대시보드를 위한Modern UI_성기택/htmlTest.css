@@ -1,0 +1,179 @@
+body{
+  width: 100%;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.menu > div > ul{
+  width: 450px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search{
+  position: relative;
+}
+
+.search>input{
+  border: 1px solid rgba(128, 128, 128, 0.582);
+  border-radius: 5px;
+}
+.search>i{
+  font-size: 12px;
+  font-weight: bold;
+  color: orange;
+  position: absolute;
+  transform: translate(-130%, 10%);
+}
+.search>i:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover{
+  color: orange;
+}
+
+li{
+  font-weight: bold;
+}
+
+li:hover{
+  color: orange;
+  cursor: pointer;
+}
+
+.banner{
+  position: relative;
+}
+
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text>h2{
+  color: orange;
+  margin-bottom: 10px;
+}
+.text>p{
+  color: white;
+}
+.text>button{
+  background-color: orange;
+  color: white;
+  padding: 5px 30px;
+  border: none;
+  margin-top: 10px;
+}
+
+.text>button:hover{
+  cursor: pointer;
+}
+
+.banner > div > img{
+  width: 100%;
+  height: 300px;
+}
+
+.re1{
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.b1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.b1>div:first-child{
+  width: 50px;
+  height: 50px;
+  color: orange;
+  border: 10px solid orange;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.b2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.b2>div:first-child{
+  width: 50px;
+  height: 50px;
+  color: orange;
+  border: 10px solid orange;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.b3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.b3>div:first-child{
+  width: 50px;
+  height: 50px;
+  color: orange;
+  border: 10px solid orange;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.b4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.b4>div:first-child{
+  width: 50px;
+  height: 50px;
+  color: orange;
+  border: 10px solid orange;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+.foot{
+  text-align: center;
+}

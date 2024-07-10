@@ -1,0 +1,30 @@
+.header{
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 10px;
+}
+
+.banner{
+  height: 150px;
+  width: 100%;
+}
+
+.banner>img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  object-position: center;
+}
+
+.body{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+
+.body>div{
+  text-align: center;
+}

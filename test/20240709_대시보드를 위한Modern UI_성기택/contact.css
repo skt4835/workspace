@@ -1,0 +1,65 @@
+.container{
+  width: 800px;
+  margin: 20px auto;
+}
+
+.c1 > table{
+  width: 100%;
+}
+
+.h1{
+  width: 100%;
+  margin: 0px auto;
+}
+
+
+.tbody{
+  border: 2px solid rgba(128, 128, 128, 0.541);
+}
+
+.tbody > tr{
+  border: 1px solid rgba(128, 128, 128, 0.541);
+}
+
+.tbody > tr > td:first-child{
+  background-color: rgba(128, 128, 128, 0.13);
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  width: 150px;
+  padding: 5px 10px;
+}
+
+tr > td{
+  padding: 10px;
+}
+
+#cen{
+  margin: 5px 0px;
+}
+
+span{
+  color: red;
+}
+
+.head{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 10px 0px;
+}
+
+.add{
+  width: 300px;
+}
+
+.call{
+  width: 60px;
+}
+
+.year{
+  width: 70px;
+}
+
+.md{
+  width: 50px;
+}
