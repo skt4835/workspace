@@ -11,8 +11,8 @@ function setAvgAge(){
   // 나이 합에 숫자로 변환해서 넣음
   ageTag.forEach(function(ages, i){
     sum += Number(ages.textContent)
-    avg = sum / 3;
   });
+  avg = sum / ageTag.length;
 
 
   const result = document.querySelector('#resultTd');
