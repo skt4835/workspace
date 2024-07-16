@@ -1,9 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = (({board_list}) => {
   //url 주소로 넘어오는 데이터 받을때 사용해야함!
+  const navigate = useNavigate();
+
+  //url로 넘어가는 데이터 받기
   const params = useParams();
   const boardNum = params.boardNum;
+  
   
   let board = null;
   for(const e of board_list){
@@ -32,6 +36,17 @@ const Detail = (({board_list}) => {
           <td>{board.content}</td>
         </tr>
       </table>
+      <button type="button" onClick={(e) => {
+        // 삭제할 게시글의 글번호
+        board_list.forEach((board, i) => {
+          if(board.boardNum == boardNum){
+            board_list.splice(i ,1)
+          }
+        });
+        // 게시글 목록
+        navigate('/');
+
+      }}>삭제!</button>
     </>
   );
 });

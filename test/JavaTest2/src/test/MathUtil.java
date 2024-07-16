@@ -12,7 +12,7 @@ public interface MathUtil {
     //아래 요구사항을 만족하는 getArraySum()메소드를 정의하시오.
     //매개변수로 정수형 배열이 들어오면
     //해당 배열의 모든 요소의 합을 리턴
-    int[] getArraySum();
+    int getArraySum(int[] arr);
 
 
 
