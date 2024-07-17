@@ -1,0 +1,16 @@
+.container{
+  text-align: center;
+  font-size: 18px;
+}
+
+td{
+  border: 1px solid black;
+}
+
+thead > tr > td{
+  padding: 5px 5px;
+}
+
+thead tr{
+  background-color: rgb(94, 177, 216);
+}

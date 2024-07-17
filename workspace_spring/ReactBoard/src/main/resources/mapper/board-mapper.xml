@@ -45,6 +45,11 @@
         )
     </insert>
 
+    <delete id="deleteBoard">
+        DELETE FROM REACT_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
 
 </mapper>
 

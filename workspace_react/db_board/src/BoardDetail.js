@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { navigate, useNavigate, useParams } from "react-router-dom";
 
 const BoardDetail = () => {
+  const navigate = useNavigate();
   //route 의 url로 전달되는 데이터 받기
   const params = useParams();
   console.log(params);   //      {boardNum: '1'}
@@ -24,6 +25,20 @@ const BoardDetail = () => {
     });
   }, []);
 
+  function deleteBoard(){
+      if (window.confirm('삭제할까유?')){
+        axios
+        .delete(`/deleteBoard/${board.boardNum}`)
+        .then((res) => {
+          alert('삭제완료')
+          navigate('/');
+        })
+        .catch((error) => {
+          alert('삭제 오류');
+          console.log(error)
+        });
+      }
+  }
   
   
   return (
@@ -33,7 +48,10 @@ const BoardDetail = () => {
       <div>내용 : {board.boardContent}</div>
       <div>작성자 : {board.boardWriter}</div>
       <div>작성일 : {board.createDate}</div>
-      <button type="button" onClick={(e) => {}}>글삭제</button>
+      <button type="button" onClick={(e) => {navigate(-1)}}>뒤로가기1</button>
+      <button type="button" onClick={(e) => {navigate('/')}}>뒤로가기2</button>
+      <button type="button" onClick={(e) => {deleteBoard()}}>글삭제</button>
+
     </div>
   );
 }
