@@ -8,6 +8,13 @@ public interface StudentService {
     // 학생 정보 조회
     List<StudentVO> getStuInfo();
 
-    StudentVO getDetail();
+    // 학생 상세 조회
+    StudentVO getDetail(int stuNum);
+
+    //학생 정보 등록
+    void insertStudent(StudentVO studentVO);
+
+    //학생 정보 삭제
+    void deleteStudent(int stuNum);
 
 }

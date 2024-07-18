@@ -37,8 +37,35 @@
             , MATH_SCORE
         FROM REACT_STUDENT
         WHERE STU_NUM = #{stuNum};
-
     </select>
+
+<!--  학생 정보 등록  -->
+    <insert id="regStu">
+        INSERT INTO REACT_STUDENT (
+            STU_NAME
+            , STU_AGE
+            , STU_TEL
+            , STU_ADDR
+            , KOR_SCORE
+            , ENG_SCORE
+            , MATH_SCORE
+        ) VALUES (
+            #{stuName}
+            ,#{stuAge}
+            ,#{tel}
+            ,#{address}
+            , 0
+            , 0
+            , 0
+        );
+    </insert>
+
+    <delete id="delete">
+      DELETE FROM REACT_STUDENT
+        WHERE STU_NUM = #{stuNum};
+    </delete>
+
+
 
 	
 </mapper>

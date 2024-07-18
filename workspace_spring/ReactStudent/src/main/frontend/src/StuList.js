@@ -23,7 +23,7 @@ useEffect(() => {
   })
 
 }, []);
-
+  
 
   return (
     <div className='container'>
@@ -41,23 +41,23 @@ useEffect(() => {
         <tbody>
           {
             getList.map((stu, i) => {
+              const avg = (stu.korScore+stu.engScore+stu.mathScore)/3;
               return (
                 <tr key={i}>
-                  <td>{stu.stuNum}</td>
+                  <td>{getList.length-i}</td>
                   <td><span onClick={() => {
                     navigate(`/info/${stu.stuNum}`);
                   }}>{stu.stuName}</span></td>
                   <td>{stu.korScore}</td>
                   <td>{stu.engScore}</td>
                   <td>{stu.mathScore}</td>
-                  <td>{(stu.korScore+stu.engScore+stu.mathScore)/3}</td>
+                  <td>{Math.round(avg * 100) / 100}</td>
                 </tr>
               );
             })
           }
         </tbody>
       </table>
-      <button type='button'></button>
     </div>
   );
 }

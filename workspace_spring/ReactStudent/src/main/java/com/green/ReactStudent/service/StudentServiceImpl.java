@@ -20,9 +20,27 @@ public class StudentServiceImpl implements StudentService{
         return stuInfo;
     }
 
+    //학생 상세 정보 조회
     @Override
-    public StudentVO getDetail() {
-        StudentVO detail = sqlSession.selectOne("studentMapper.detail");
+    public StudentVO getDetail(int stuNum) {
+        StudentVO detail = sqlSession.selectOne("studentMapper.detail", stuNum);
         return detail;
     }
+
+    //학생 정보 등록
+    @Override
+    public void insertStudent(StudentVO studentVO) {
+        sqlSession.insert("studentMapper.regStu", studentVO);
+
+    }
+
+    @Override
+    public void deleteStudent(int stuNum) {
+        sqlSession.selectOne("studentMapper.delete", stuNum);
+    }
+
+    //학생 정보 삭제
+
+
+
 }

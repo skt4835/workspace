@@ -31,7 +31,7 @@ function App() {
           <Route path='/' element={ <StuList /> }></Route>
   
           //학생상세정보조회 페이지
-          <Route path='/info/:id' element={ <StuInfo /> }></Route>
+          <Route path='/info/:stuNum' element={ <StuInfo /> }></Route>
   
           //학생등록 페이지
           <Route path='/regStu' element={ <RegStu /> }></Route>
