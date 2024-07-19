@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './StuList.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+//import * as api from './apis';
+import {getStuList} from './apis';
 
 
 const StuList = () => {
@@ -12,8 +14,7 @@ const [getList, setGetList] = useState([])
 
 //학생 정보 목록 페이지
 useEffect(() => {
-  axios
-  .get('/getList')
+  getStuList()
   .then((res) => {
     console.log(res.data);
     setGetList(res.data);

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getInsert } from "./apis";
 
 const RegStu = () => {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const RegStu = () => {
   }
 
   function regStudent(){
+    console.log(stuInfo);
+
     //이름 입력했는지 확인
     const nameInputTag = document.querySelector('input[name="stuName"]');
     if (nameInputTag.value == ''){
@@ -45,8 +48,8 @@ const RegStu = () => {
     <div>
       이름 <input name="stuName" onChange={(e) => {changeStuInfo(e)}} /> <br />
       나이 <input name="stuAge" onChange={(e) => {changeStuInfo(e)}} /> <br />
-      연락처 <input name="stuTel" onChange={(e) => {changeStuInfo(e)}} /> <br />
-      주소 <input name="stuAddr" onChange={(e) => {changeStuInfo(e)}} /> <br />
+      연락처 <input name="tel" onChange={(e) => {changeStuInfo(e)}} /> <br />
+      주소 <input name="address" onChange={(e) => {changeStuInfo(e)}} /> <br />
       <button type="button" onClick={(e) => {regStudent()}}>학생등록</button>
     </div>
   );

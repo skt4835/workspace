@@ -7,8 +7,13 @@ import RegStu from './RegStu';
 import Delete from './Delete';
 import Score from './Score';
 import StuInfo from './StuInfo';
+import * as api from './apis';
+import RegScore from './RegScore';
 
 function App() {
+  // api.myName;
+  // api.myAge;
+  // api.myPrint2();
 
   const navigate = useNavigate();
 
@@ -43,7 +48,7 @@ function App() {
           <Route path='/score' element={ <Score /> }></Route>
   
           //학생성적입력 페이지
-          <Route path='' element={() => {}}></Route>
+          <Route path='/regScore/:stuNum' element={ <RegScore /> }></Route>
         </Routes>
       </div>
     </div>

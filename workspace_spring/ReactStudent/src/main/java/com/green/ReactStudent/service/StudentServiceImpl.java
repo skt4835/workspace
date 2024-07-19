@@ -33,13 +33,22 @@ public class StudentServiceImpl implements StudentService{
         sqlSession.insert("studentMapper.regStu", studentVO);
 
     }
-
+    //학생 정보 삭제
     @Override
     public void deleteStudent(int stuNum) {
+
         sqlSession.selectOne("studentMapper.delete", stuNum);
     }
 
-    //학생 정보 삭제
+    //학생 성적 등록
+    @Override
+    public void updateScore(StudentVO studentVO) {
+
+        sqlSession.update("studentMapper.updateScore", studentVO);
+    }
+
+
+
 
 
 

@@ -39,4 +39,9 @@ public class StudentController {
          studentService.deleteStudent(stuNum);
     }
 
+    //학생 성적 등록
+    @PutMapping("/updateScore")
+    public void updateScore(@RequestBody StudentVO studentVO){
+        studentService.updateScore(studentVO);
+    }
 }

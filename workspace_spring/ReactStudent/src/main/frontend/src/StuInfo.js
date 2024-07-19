@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { getDetail } from "./apis";
 
 const StuInfo = () => {
   
-
+  const navigate = useNavigate();
   const params = useParams();
-
   const [detail, setDetail] = useState({});
 
+
   useEffect(() => {
-    axios
-    .get(`/detail/${params.stuNum}`)
+    getDetail(params.stuNum)
     .then((res) => {
       console.log(res.data);
       setDetail(res.data); 
