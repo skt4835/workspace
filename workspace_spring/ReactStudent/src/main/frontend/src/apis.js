@@ -5,8 +5,8 @@ import axios from "axios";
 
 //학생 목록 조회 api
 export const getStuList = () => {
-  const respnse = axios.get('/getList');
-  return respnse;
+  const response = axios.get('/getList');
+  return response;
 }
 
 
