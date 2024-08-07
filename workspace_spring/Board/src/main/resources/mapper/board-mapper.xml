@@ -4,27 +4,73 @@
 <!-- 해당 파일에 모든 쿼리문을 작성 -->
 <mapper namespace="boardMapper">
     <resultMap id="board" type="com.green.Board.vo.BoardVO">
-        <result column="BOARD_NUM" property="boardNum" />
-        <result column="TITLE" property="title" />
-        <result column="CONTENT" property="content" />
-        <result column="MEM_ID" property="id" />
-        <result column="CREATE_DATE" property="date" />
+        <id column="BOARD_NUM"          property="boardNum"/>
+        <result column="TITLE"          property="title"/>
+        <result column="CONTENT"        property="content"/>
+        <result column="MEM_ID"         property="memId"/>
+        <result column="CREATE_DATE"    property="createDate"/>
     </resultMap>
 
-<!--  게시글 목록 조회  -->
+
+    <!--게시글 목록 조회-->
     <select id="getBoardList" resultMap="board">
         SELECT BOARD_NUM
-            , TITLE
+        , TITLE
+        , MEM_ID
+        , CREATE_DATE
+        FROM BOARD
+        <if test=' searchValue != null and !searchValue.equals("") '>
+            WHERE ${searchType} LIKE CONCAT ('%', #{searchValue}, '%')
+        </if>
+        ORDER BY BOARD_NUM DESC
+        LIMIT #{displayDataCnt} OFFSET #{offset}
+    </select>
+
+
+    <insert id="insertBoard">
+        INSERT INTO BOARD (
+            TITLE
+            , CONTENT
+            , MEM_ID
+        ) VALUES (
+            #{title}
+            , #{content}
+            , #{memId}
+        )
+    </insert>
+
+    <!--게시글 상세 조회-->
+    <select id="getBoardDetail" resultMap="board">
+        SELECT BOARD_NUM
+            ,TITLE
+            , CONTENT
             , MEM_ID
             , CREATE_DATE
-        FROM BOARD
-        ORDER BY CREATE_DATE DESC;
+        FROM board
+        WHERE BOARD_NUM = #{boardNum}
     </select>
-	
+
+<!--  게시글 삭제  -->
+    <delete id="deleteBoard">
+        DELETE FROM BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+    <update id="updateBoard">
+        UPDATE BOARD
+        SET
+        TITLE = #{title},
+        CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+<!--  전체 게시글 수 조회  -->
+    <select id="getBoardCnt" resultType="int">
+        SELECT COUNT(BOARD_NUM)
+        FROM BOARD
+    </select>
+
 </mapper>
-
-
-
 
 
 

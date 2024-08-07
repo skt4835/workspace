@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'GoodNeighbors-Good-Neighbors-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/GoodNeighbors-Good-Neighbors-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container{
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 20px;
+  
+}
+
+table{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #D0BFFF;
+}
+
+tr > td{
+  cursor: pointer;
+  border: 2px solid white;
+}
+

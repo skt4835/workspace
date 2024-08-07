@@ -7,6 +7,6 @@ public class ReplyVO {
     private int replyNum;
     private String replyContent;
     private String replyDate;
-    private String id;
+    private String memId;
     private int boardNum;
 }

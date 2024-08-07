@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import * as boardApi from '../apis/boardApi';
 
-const Board = () => {
+const Board = ({loginInfo}) => {
+  const navigate = useNavigate();
   const [boardList, setBoardList] = useState([]);
 
   //게시글 목록 조회
   useEffect(() => {
-    axios
-    .get('/board/list')
+    boardApi.getBoardList()
     .then((res) => {
       setBoardList(res.data);
     })
@@ -51,7 +52,9 @@ const Board = () => {
                 return (
                   <tr key={i}>
                     <td>{boardList.length - i}</td>
-                    <td>{board.title}</td>
+                    <td>
+                      <span onClick={(e) => {navigate(`/detail/${board.boardNum}`)}}>{board.title}</span>
+                    </td>
                     <td>{board.id}</td>
                     <td>{board.date}</td>
                   </tr>
@@ -61,8 +64,15 @@ const Board = () => {
           </tbody>
         </table>
       </div>
-      <div className="button-div"></div>
-    </div>
+        {
+          loginInfo.id != null ? 
+          <div className="button-div">
+          <button type="button" className="btn" onClick={(e) => {navigate('/write')}}>글쓰기</button>
+          </div>
+          : 
+          null
+        }
+      </div>
   );
 }
 
